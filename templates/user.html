@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block body %}
+    <div class="container">
+        {% if shop_lists %}
+            <ul>
+                {% for shop_list in shop_lists %}
+                    <li><a href="">{{ shop_list.name }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No shop list is available.</p>
+        {% endif %}
+    </div>
+{% endblock %}
